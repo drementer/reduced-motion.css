@@ -1,0 +1,53 @@
+/*
+	(https://github.com/csstools/sanitize.css/blob/main/reduce-motion.css)
+
+	1. Remove animations when motion is reduced (opinionated).
+	2. Remove fixed background attachments when motion is reduced (opinionated).
+	3. Remove timed scrolling behaviors when motion is reduced (opinionated).
+	4. Remove transitions when motion is reduced (opinionated).
+*/
+@media (prefers-reduced-motion: reduce) {
+  *,
+*::before,
+*::after {
+    -webkit-animation-delay: -1ms !important;
+            animation-delay: -1ms !important;
+    /* 1 */
+    -webkit-animation-duration: 1ms !important;
+            animation-duration: 1ms !important;
+    /* 1 */
+    -webkit-animation-iteration-count: 1 !important;
+            animation-iteration-count: 1 !important;
+    /* 1 */
+    background-attachment: initial !important;
+    /* 2 */
+    scroll-behavior: auto !important;
+    /* 3 */
+    transition-delay: 0s !important;
+    /* 4 */
+    transition-duration: 0s !important;
+    /* 4 */
+  }
+}
+[reduced-motion], [reduced-motion]::before, [reduced-motion]::after,
+[reduced-motion] *:not(*[reduced-motion=false] *),
+[reduced-motion] *:not(*[reduced-motion=false] *)::before,
+[reduced-motion] *:not(*[reduced-motion=false] *)::after {
+  -webkit-animation-delay: -1ms !important;
+          animation-delay: -1ms !important;
+  /* 1 */
+  -webkit-animation-duration: 1ms !important;
+          animation-duration: 1ms !important;
+  /* 1 */
+  -webkit-animation-iteration-count: 1 !important;
+          animation-iteration-count: 1 !important;
+  /* 1 */
+  background-attachment: initial !important;
+  /* 2 */
+  scroll-behavior: auto !important;
+  /* 3 */
+  transition-delay: 0s !important;
+  /* 4 */
+  transition-duration: 0s !important;
+  /* 4 */
+}/*# sourceMappingURL=reduced-motion.min.css.map */

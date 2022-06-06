@@ -1,0 +1,25 @@
+{
+	"name": "reduced-motion.css",
+	"version": "0.0.1",
+	"homepage": "https://github.com/drementer/reduced-motion.css.git",
+	"description": "",
+	"scripts": {
+		"": ""
+	},
+	"keywords": [
+		""
+	],
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/drementer/reduced-motion.css.git"
+	},
+	"author": {
+		"name": "drementer",
+		"email": "klncarslanburak@gmail.com",
+		"url": "https://github.com/drementer"
+	},
+	"license": "MIT",
+	"bugs": {
+		"url": "https://github.com/drementer/reduced-motion.css/issues"
+	}
+}
