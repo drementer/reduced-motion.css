@@ -45,6 +45,8 @@ Terminal kullanarak indir
 </body>
 ```
 
+Or it will be automatically fired himself
+
 ## Geliştirici
 
 -   [@drementer](https://github.com/drementer)
