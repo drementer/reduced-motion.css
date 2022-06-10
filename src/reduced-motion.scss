@@ -37,8 +37,8 @@ $not: $parent-not + $child-not;
 	transition-duration: 0s !important;
 }
 @mixin close-marquee {
-	/* 5 */
 	marquee {
+		/* 5 */
 		display: none !important;
 	}
 }
