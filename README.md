@@ -11,18 +11,46 @@ Proje açıklaması
 
 ## Hızlı Başlangıç
 
-[En güncel hali (zip)](https://github.com/drementer/reduced-motion.css/archive/refs/heads/master.zip)
-
 Terminal kullanarak indir
 
 ```bash
-  git clone https://github.com/drementer/proje-ismi.git
+  git clone https://github.com/drementer/reduced-motion.css.git
 ```
 
 ## Kullanım/Örnekler
 
-```javascript
+```html
+	<main>
+		<section>
+			// Animations running
+		</section>
+	</main>
+```
 
+```html
+	<main reduced-motion>
+		<section>
+			// Animations stopped
+		</section>
+	</main>
+```
+
+```html
+	<main reduced-motion>
+		<section reduced-motion="off">
+			// Animations still running
+		</section>
+	</main>
+```
+
+```html
+	<body reduced-motion>
+		<main reduced-motion="off">
+			<section reduced-motion>
+				// Animations stopped
+			</section>
+		</main>
+	</body>
 ```
 
 ## Geliştirici
@@ -32,5 +60,3 @@ Terminal kullanarak indir
 ## Lisans
 
 [MIT](https://choosealicense.com/licenses/mit/)
-https://web.dev/prefers-reduced-motion/#(bonus)-forcing-reduced-motion-on-all-websites
-https://www.youtube.com/watch?v=uANmA7korfs
