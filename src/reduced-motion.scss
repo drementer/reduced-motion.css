@@ -14,8 +14,11 @@
 */
 
 $root: reduced-motion;
-$parameter: "off";
-$not: ":not(*[#{$root}=#{$parameter}]):not(*[#{$root}=#{$parameter}] *)";
+
+$not-parameter: "off";
+$parent-not: ":not(*[#{$root}=#{$not-parameter}])";
+$child-not: ":not(*[#{$root}=#{$not-parameter}] *)";
+$not: $parent-not + $child-not;
 
 @mixin content-filler {
 	/* 1 */
@@ -33,15 +36,15 @@ $not: ":not(*[#{$root}=#{$parameter}]):not(*[#{$root}=#{$parameter}] *)";
 	transition-delay: 0s !important;
 	transition-duration: 0s !important;
 }
-@mixin media-content-filler() {
-	@media (prefers-reduced-motion: reduce) {
-		@include content-filler;
-	}
-}
 @mixin close-marquee {
 	/* 5 */
 	marquee {
 		display: none !important;
+	}
+}
+@mixin media-content-filler() {
+	@media (prefers-reduced-motion: reduce) {
+		@include content-filler;
 	}
 }
 @mixin media-close-marquee() {
