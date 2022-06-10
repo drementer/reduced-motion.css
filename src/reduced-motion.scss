@@ -1,9 +1,15 @@
+/*!
+	@author drementer
+	@license MIT (https://github.com/drementer/reduced-motion.css/blob/master/LICENSE) 	 
+*/
+
 /*
 	Remove
 	(1) animations (opinionated),
 	(2) fixed background attachments (opinionated),
 	(3) timed scrolling behaviors (opinionated),
 	(4) ransitions (opinionated)
+	(5) hide marquee elements (opinionated)
 	when motion is reduced.
 */
 
@@ -32,6 +38,17 @@ $not: ":not(*[#{$root}=#{$parameter}]):not(*[#{$root}=#{$parameter}] *)";
 		@include content-filler;
 	}
 }
+@mixin close-marquee {
+	/* 5 */
+	marquee {
+		display: none !important;
+	}
+}
+@mixin media-close-marquee() {
+	@media (prefers-reduced-motion: reduce) {
+		@include close-marquee;
+	}
+}
 
 [#{$root}] {
 	&#{$not},
@@ -41,16 +58,15 @@ $not: ":not(*[#{$root}=#{$parameter}]):not(*[#{$root}=#{$parameter}] *)";
 		&::after {
 			@include content-filler();
 		}
+		@include close-marquee();
 	}
 }
 
 * {
-	&#{$not},
-	*#{$not} {
-		&,
-		&::before,
-		&::after {
-			@include media-content-filler();
-		}
+	&,
+	&::before,
+	&::after {
+		@include media-content-filler();
 	}
+	@include media-close-marquee();
 }
