@@ -32,3 +32,5 @@ Terminal kullanarak indir
 ## Lisans
 
 [MIT](https://choosealicense.com/licenses/mit/)
+https://web.dev/prefers-reduced-motion/#(bonus)-forcing-reduced-motion-on-all-websites
+https://www.youtube.com/watch?v=uANmA7korfs
