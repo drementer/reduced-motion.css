@@ -20,37 +20,29 @@ Terminal kullanarak indir
 ## Kullanım/Örnekler
 
 ```html
-	<main>
-		<section>
-			// Animations running
-		</section>
-	</main>
+<main>
+    <section>// Animations running</section>
+</main>
 ```
 
 ```html
-	<main reduced-motion>
-		<section>
-			// Animations stopped
-		</section>
-	</main>
+<main reduced-motion>
+    <section>// Animations stopped</section>
+</main>
 ```
 
 ```html
-	<main reduced-motion>
-		<section reduced-motion="off">
-			// Animations still running
-		</section>
-	</main>
+<main reduced-motion>
+    <section reduced-motion="off">// Animations still running</section>
+</main>
 ```
 
 ```html
-	<body reduced-motion>
-		<main reduced-motion="off">
-			<section reduced-motion>
-				// Animations stopped
-			</section>
-		</main>
-	</body>
+<body reduced-motion>
+    <main reduced-motion="off">
+        <section reduced-motion>// Animations stopped</section>
+    </main>
+</body>
 ```
 
 ## Geliştirici
