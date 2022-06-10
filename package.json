@@ -1,25 +1,27 @@
 {
 	"name": "reduced-motion.css",
-	"version": "0.0.1",
+	"version": "1.0.0",
 	"homepage": "https://github.com/drementer/reduced-motion.css.git",
-	"description": "",
-	"scripts": {
-		"": ""
-	},
+	"description": "Reduced all animations for performance ",
 	"keywords": [
-		""
+		"css",
+		"performance",
+		"motion",
+		"scss",
+		"reduce",
+		"reduce-motion"
 	],
 	"repository": {
 		"type": "git",
 		"url": "git+https://github.com/drementer/reduced-motion.css.git"
+	},
+		"bugs": {
+		"url": "https://github.com/drementer/reduced-motion.css/issues"
 	},
 	"author": {
 		"name": "drementer",
 		"email": "klncarslanburak@gmail.com",
 		"url": "https://github.com/drementer"
 	},
-	"license": "MIT",
-	"bugs": {
-		"url": "https://github.com/drementer/reduced-motion.css/issues"
-	}
+	"license": "MIT"
 }
