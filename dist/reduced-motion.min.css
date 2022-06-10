@@ -1,53 +1,67 @@
-/*
-	(https://github.com/csstools/sanitize.css/blob/main/reduce-motion.css)
-
-	1. Remove animations when motion is reduced (opinionated).
-	2. Remove fixed background attachments when motion is reduced (opinionated).
-	3. Remove timed scrolling behaviors when motion is reduced (opinionated).
-	4. Remove transitions when motion is reduced (opinionated).
+/*!
+	@author drementer
+	@license MIT (https://github.com/drementer/reduced-motion.css/blob/master/LICENSE) 	 
 */
-@media (prefers-reduced-motion: reduce) {
-  *,
-*::before,
-*::after {
-    -webkit-animation-delay: -1ms !important;
-            animation-delay: -1ms !important;
-    /* 1 */
-    -webkit-animation-duration: 1ms !important;
-            animation-duration: 1ms !important;
-    /* 1 */
-    -webkit-animation-iteration-count: 1 !important;
-            animation-iteration-count: 1 !important;
-    /* 1 */
-    background-attachment: initial !important;
-    /* 2 */
-    scroll-behavior: auto !important;
-    /* 3 */
-    transition-delay: 0s !important;
-    /* 4 */
-    transition-duration: 0s !important;
-    /* 4 */
-  }
+/*
+	Remove
+	(1) animations (opinionated),
+	(2) fixed background attachments (opinionated),
+	(3) timed scrolling behaviors (opinionated),
+	(4) ransitions (opinionated)
+	(5) hide marquee elements (opinionated)
+	when motion is reduced.
+*/
+[reduced-motion]:not(*[reduced-motion=off]):not(*[reduced-motion=off] *),
+[reduced-motion] *:not(*[reduced-motion=off]):not(*[reduced-motion=off] *) {
+  /* 5 */
 }
-[reduced-motion], [reduced-motion]::before, [reduced-motion]::after,
-[reduced-motion] *:not(*[reduced-motion=false] *),
-[reduced-motion] *:not(*[reduced-motion=false] *)::before,
-[reduced-motion] *:not(*[reduced-motion=false] *)::after {
+[reduced-motion]:not(*[reduced-motion=off]):not(*[reduced-motion=off] *), [reduced-motion]:not(*[reduced-motion=off]):not(*[reduced-motion=off] *)::before, [reduced-motion]:not(*[reduced-motion=off]):not(*[reduced-motion=off] *)::after,
+[reduced-motion] *:not(*[reduced-motion=off]):not(*[reduced-motion=off] *),
+[reduced-motion] *:not(*[reduced-motion=off]):not(*[reduced-motion=off] *)::before,
+[reduced-motion] *:not(*[reduced-motion=off]):not(*[reduced-motion=off] *)::after {
+  /* 1 */
   -webkit-animation-delay: -1ms !important;
           animation-delay: -1ms !important;
-  /* 1 */
   -webkit-animation-duration: 1ms !important;
           animation-duration: 1ms !important;
-  /* 1 */
   -webkit-animation-iteration-count: 1 !important;
           animation-iteration-count: 1 !important;
-  /* 1 */
-  background-attachment: initial !important;
   /* 2 */
-  scroll-behavior: auto !important;
+  background-attachment: initial !important;
   /* 3 */
+  scroll-behavior: auto !important;
+  /* 4 */
   transition-delay: 0s !important;
-  /* 4 */
   transition-duration: 0s !important;
-  /* 4 */
+}
+[reduced-motion]:not(*[reduced-motion=off]):not(*[reduced-motion=off] *) marquee,
+[reduced-motion] *:not(*[reduced-motion=off]):not(*[reduced-motion=off] *) marquee {
+  display: none !important;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    /* 1 */
+    -webkit-animation-delay: -1ms !important;
+            animation-delay: -1ms !important;
+    -webkit-animation-duration: 1ms !important;
+            animation-duration: 1ms !important;
+    -webkit-animation-iteration-count: 1 !important;
+            animation-iteration-count: 1 !important;
+    /* 2 */
+    background-attachment: initial !important;
+    /* 3 */
+    scroll-behavior: auto !important;
+    /* 4 */
+    transition-delay: 0s !important;
+    transition-duration: 0s !important;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  * {
+    /* 5 */
+  }
+  * marquee {
+    display: none !important;
+  }
 }/*# sourceMappingURL=reduced-motion.min.css.map */
