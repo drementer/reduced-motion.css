@@ -46,6 +46,7 @@ Terminal kullanarak indir
 ```
 
 Or it will be automatically fired himself
+![](/auto-detect.mp4.gif)
 
 ## Geliştirici
 
