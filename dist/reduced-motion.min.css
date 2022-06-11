@@ -4,11 +4,11 @@
 */
 /*
 	Remove
-	(1) animations (opinionated),
-	(2) fixed background attachments (opinionated),
-	(3) timed scrolling behaviors (opinionated),
-	(4) ransitions (opinionated)
-	(5) hide marquee elements (opinionated)
+	(1) animations 						(opinionated),
+	(2) fixed background attachments 	(opinionated),
+	(3) timed scrolling behaviors 		(opinionated),
+	(4) ransitions 						(opinionated),
+	(5) hide marquee elements 			(opinionated)
 	when motion is reduced.
 */
 [reduced-motion]:not(*[reduced-motion=off]):not(*[reduced-motion=off] *), [reduced-motion]:not(*[reduced-motion=off]):not(*[reduced-motion=off] *)::before, [reduced-motion]:not(*[reduced-motion=off]):not(*[reduced-motion=off] *)::after,
@@ -30,14 +30,12 @@
   transition-delay: 0s !important;
   transition-duration: 0s !important;
 }
-[reduced-motion]:not(*[reduced-motion=off]):not(*[reduced-motion=off] *) marquee,
-[reduced-motion] *:not(*[reduced-motion=off]):not(*[reduced-motion=off] *) marquee {
-  /* 5 */
-  display: none !important;
-}
 
 @media (prefers-reduced-motion: reduce) {
-  *, *::before, *::after {
+  *:not(*[reduced-motion=off]):not(*[reduced-motion=off] *), *:not(*[reduced-motion=off]):not(*[reduced-motion=off] *)::before, *:not(*[reduced-motion=off]):not(*[reduced-motion=off] *)::after,
+* *:not(*[reduced-motion=off]):not(*[reduced-motion=off] *),
+* *:not(*[reduced-motion=off]):not(*[reduced-motion=off] *)::before,
+* *:not(*[reduced-motion=off]):not(*[reduced-motion=off] *)::after {
     /* 1 */
     -webkit-animation-delay: -1ms !important;
             animation-delay: -1ms !important;
@@ -52,11 +50,5 @@
     /* 4 */
     transition-delay: 0s !important;
     transition-duration: 0s !important;
-  }
-}
-@media (prefers-reduced-motion: reduce) {
-  * marquee {
-    /* 5 */
-    display: none !important;
   }
 }/*# sourceMappingURL=reduced-motion.min.css.map */
