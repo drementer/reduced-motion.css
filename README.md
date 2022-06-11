@@ -47,7 +47,7 @@ Using CMD for download
 ```
 
 Or it will be automatically fired himself
-![Web Dev Video](auto-detect.gif)
+![Web Dev Video](auto-fired.gif)
 
 ## Source Of Idea
 -	[web.dev](https://web.dev/prefers-reduced-motion/)
