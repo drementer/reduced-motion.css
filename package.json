@@ -1,6 +1,6 @@
 {
 	"name": "reduced-motion.css",
-	"version": "1.0.1",
+	"version": "1.0.2",
 	"homepage": "https://github.com/drementer/reduced-motion.css.git",
 	"description": "Reduced all animations for performance",
 	"keywords": [
