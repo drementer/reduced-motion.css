@@ -15,13 +15,9 @@
 		"type": "git",
 		"url": "git+https://github.com/drementer/reduced-motion.css.git"
 	},
-		"bugs": {
+	"bugs": {
 		"url": "https://github.com/drementer/reduced-motion.css/issues"
 	},
-	"author": {
-		"name": "drementer",
-		"email": "klncarslanburak@gmail.com",
-		"url": "https://github.com/drementer"
-	},
+	"author": "drementer <klncarslanburak@gmail.com> (https://github.com/drementer)",
 	"license": "MIT"
 }
